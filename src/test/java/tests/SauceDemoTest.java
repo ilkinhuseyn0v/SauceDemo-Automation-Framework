@@ -22,7 +22,7 @@ public class SauceDemoTest {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        // options.addArguments("--headless"); // Video için kapalı kalmalı
+        options.addArguments("--headless"); // Video için kapalı kalmalı
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
