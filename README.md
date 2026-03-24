@@ -10,22 +10,6 @@ Selenium əsaslı UI test automation framework - [SauceDemo](https://www.saucede
 - **Allure Report** - Test hesabatları
 - **Maven** - Asılılıq idarəetməsi
 
-##  Layihə Strukturu
-```
-SauceDemo-Automation-Framework/
-├── src/
-│   ├── main/
-│   │   └── java/
-│   │       ├── pages/          # Page Object Models
-│   │       ├── utils/          # Köməkçi metodlar
-│   │       └── config/         # Konfiqurasiya faylları
-│   └── test/
-│       └── java/
-│           └── tests/          # Test klasları
-├── test-output/                # TestNG hesabatları
-├── allure-results/             # Allure test nəticələri
-├── pom.xml                     # Maven dependencies
-└── testng.xml                  # TestNG suite konfiqurasiyası
 ```
 
 ##  Xüsusiyyətlər
