@@ -10,8 +10,6 @@ Selenium əsaslı UI test automation framework - [SauceDemo](https://www.saucede
 - **Allure Report** - Test hesabatları
 - **Maven** - Asılılıq idarəetməsi
 
-```
-
 ##  Xüsusiyyətlər
 
 - Page Object Model (POM) dizayn pattern
