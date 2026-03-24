@@ -22,7 +22,7 @@ public class SauceDemoTest {
         WebDriverManager.chromedriver().setup();
 
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless"); // Video için kapalı kalmalı
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
 
@@ -31,22 +31,20 @@ public class SauceDemoTest {
     }
 
     @Test
-    public void testSuccessfulLogin() throws InterruptedException { // Throws ekledik
+    public void testSuccessfulLogin() throws InterruptedException { 
         driver.get("https://www.saucedemo.com/");
-        Thread.sleep(2000); // İzleyicinin siteyi görmesi için 2 sn bekle
+        Thread.sleep(2000);
 
         LoginPage loginPage = new LoginPage(driver);
 
-        // Not: Login metodunu LoginPage içinde küçük beklemelerle güncelleyebilir
-        // veya burada manuel elementlerle yavaşlatılmış şekilde gösterebilirsin:
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        Thread.sleep(1000); // Yazma işlemini görmeleri için 1 sn bekle
+        Thread.sleep(1000);
 
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         Thread.sleep(1000);
 
         driver.findElement(By.id("login-button")).click();
-        Thread.sleep(2000); // Giriş sonrası sayfayı görsünler
+        Thread.sleep(2000);
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("title")));
@@ -55,7 +53,7 @@ public class SauceDemoTest {
         Assert.assertEquals(pageTitle, "Products", "HATA: Giriş yapılamadı veya yanlış sayfa!");
 
         System.out.println("Test Başarılı: Başarıyla giriş yapıldı ve Ürünler sayfası görüldü.");
-        Thread.sleep(2000); // Videoyu kapatmadan önce sonucu 2 sn ekranda tut
+        Thread.sleep(2000);
     }
 
     @AfterMethod
